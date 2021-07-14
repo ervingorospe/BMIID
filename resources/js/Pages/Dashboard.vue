@@ -173,7 +173,7 @@
       var year = currentTime.getFullYear();
       this.countYear = year - this.currYear;
 
-      this.allDisease();
+      // this.allDisease();
       this.totalDiseaseCase();
     },
     methods: {
@@ -248,21 +248,21 @@
           };
         })
       },
-      allDisease: function(){
-        axios.get('/api/alldisease').then((response) => {
-          this.disease_names = response.data.data;
-          this.chart_form.disease_id = response.data.data[0].id;
-          this.chart_form2.disease_id = response.data.data[0].id;
-          this.barLabel = response.data.data[0].disease_name;
-          this.pieLabel = response.data.data[0].disease_name;
-          this.chart_form.years = 2021;
-        }).then(() => {
-          this.diseaseChange();
-          this.diseaseChangePie();
-        }).catch((error) =>{
-          console.log(error);
-        })
-      }
+      // allDisease: function(){
+      //   axios.get('/api/alldisease').then((response) => {
+      //     this.disease_names = response.data.data;
+      //     this.chart_form.disease_id = response.data.data[0].id;
+      //     this.chart_form2.disease_id = response.data.data[0].id;
+      //     this.barLabel = response.data.data[0].disease_name;
+      //     this.pieLabel = response.data.data[0].disease_name;
+      //     this.chart_form.years = 2021;
+      //   }).then(() => {
+      //     this.diseaseChange();
+      //     this.diseaseChangePie();
+      //   }).catch((error) =>{
+      //     console.log(error);
+      //   })
+      // }
     }
   }
 </script>

@@ -18,7 +18,6 @@ class AuthController extends Controller
       if(Auth::attempt(['username' => $request->username, 'password' => $request->password])) {
         if(Auth::user()->archive){
           Auth::logout();
-          auth()->user()->tokens()->delete();
 
           return response()->json([
             'status_code' => '2',
