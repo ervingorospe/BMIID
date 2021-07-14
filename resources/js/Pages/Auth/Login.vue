@@ -89,9 +89,6 @@
 
         if(this.validation.usernameErr === false && this.validation.passwordErr === false){
           axios.get('/sanctum/csrf-cookie').then(response => {
-            window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-            window.axios.defaults.withCredentials = true;
-
             axios.post('/api/auth', this.form ).then((response) => {
               if(response.data.status_code === "2"){
                 this.validation.submit = false;

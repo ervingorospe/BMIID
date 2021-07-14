@@ -155,7 +155,7 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN', '.ondigitalocean.app'),
+    'domain' => env('SESSION_DOMAIN', '127.0.0.1:8000, .ondigitalocean.app'),
 
     /*
     |--------------------------------------------------------------------------
