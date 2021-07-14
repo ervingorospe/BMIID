@@ -16,7 +16,7 @@
         </div>
         <div class="flex justify-center">
           <select v-on:change="diseaseChange" class="px-7 py-2" v-model="chart_form.disease_id">
-            <option v-for="d in disease_names" :key="d.id" :value="d.id">{{ d.disease_name }}</option>
+            <option v-for="d in totalDisease" :key="d.id" :value="d.id">{{ d.disease_name }}</option>
           </select>
           <select v-on:change="diseaseChange" class="px-7 py-2 ml-2" v-model="chart_form.years">
             <option value="2021" selected>2021</option>
@@ -38,7 +38,7 @@
             <p class="mt-5 text-base uppercase text-center">total cases in Baguio</p>
             <div class="flex justify-center">
               <select v-on:change="diseaseChangePie" class="px-7 py-2" v-model="chart_form2.disease_id">
-                <option v-for="d in disease_names" :key="d.id" :value="d.id">{{ d.disease_name }}</option>
+                <option v-for="d in totalDisease" :key="d.id" :value="d.id">{{ d.disease_name }}</option>
               </select>
             </div>
           </div>

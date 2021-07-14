@@ -172,8 +172,8 @@
     },
     methods:{
       getAllDisease: function(){
-        axios.get('/api/alldisease').then((response) => {
-          this.disease_names = response.data.data;
+        axios.get('api/total_disease_case').then(response => {
+          this.totalDisease = response.data[0];
         })
       },
       onChange: function(){
