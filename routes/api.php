@@ -84,7 +84,7 @@ Route::get('/news', [NewsController::class, 'index']);
 //disease routes
 Route::get('/disease', [DiseaseController::class, 'index']);
 Route::get('/disease-names', [DiseaseController::class, 'show']);
-Route::get('/alldisease', [DiseaseController::class, 'allDisease']);
+
 
 //cases routes
 Route::get('/count-cases', [DiseaseController::class, 'countCases']);
