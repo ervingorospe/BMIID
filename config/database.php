@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Str;
 
-$DATABASE_URL=parse_url('postgresql://bmiid:o9fauyyfhdgmykkh@app-aee5dbb0-54c6-4925-a1bb-04286c0de2c4-do-user-8821995-0.b.db.ondigitalocean.com:25060/bmiid?sslmode=require');
+$DATABASE_URL=parse_url('postgresql://bmiid:vg0wzffcq0ofo25n@app-cf5304b3-bdea-4db5-a752-eee4982f327c-do-user-8821995-0.b.db.ondigitalocean.com:25060/bmiid?sslmode=require');
 
 return [
 
