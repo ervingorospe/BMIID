@@ -165,17 +165,15 @@
         }).then(() => {
           this.onChange();
         }).then(() => {
-          this.getAllDisease();
-          this.loading = false;
+          axios.get('/api/alldisease').then(response => {
+            this.disease_names = response.data[0];
+            console.log(response.data);
+            this.loading = false;
+          })
         })
       })
     },
     methods:{
-      getAllDisease: function(){
-        axios.get('api/total_disease_case').then(response => {
-          this.totalDisease = response.data[0];
-        })
-      },
       onChange: function(){
         axios.post('/api/count-cases2', { id: this.case_name }).then((response) => {
           this.active = response.data.active - (response.data.deceased + response.data.recovered);
